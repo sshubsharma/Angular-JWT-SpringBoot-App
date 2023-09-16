@@ -1,0 +1,25 @@
+<div class="container">
+
+    <div class="alert-warning" *ngIf="responseErrorMsgFromApi">
+   <h1>oops some error occured </h1> 
+    {{responseErrorMsgFromApi}}
+    </div>
+    <h1>Welcome!</h1>
+<div>{{name}} manage todo's list <a routerLink="/todos">here</a> </div>
+
+<div class="container">
+    Click here to get welcome message from restApi call
+    <button (click)="getWelcomeMsgWithParam()" class="btn btn-success">Get Welcome Msg</button>
+</div>
+
+<div class="container" *ngIf="responseMsgFromApi">
+   <h1>welcome message from restApi call </h1> 
+    {{responseMsgFromApi}}
+</div>
+
+
+
+
+</div>
+
+

@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Login!</h1>
+
+<div class="alert alert-warning" *ngIf="inValidCred">{{errorMessage}}</div>
+
+<div>
+    User Name: <input type="text"  [(ngModel)]="username" name="user name" />
+    Password: <input type="Password" name="Password" [(ngModel)]="password"/>
+    <!-- username: {{username}} -->
+    <button (click)=handlejwtBasicAuthLogin() class="btn btn-success">Login</button>
+</div>
+</div>
